@@ -13,25 +13,19 @@
 	<script type="text/javascript" src="js/main/header/myScroll.js"></script>
 	<script src="js/main/rollingBox/rollingBox.js"></script>
 	<script src="js/main/visual/visual.js"></script>
-	<script>
-		$(document).ready(function(){
-			$('.myScroll').myScroll({
-				btns : '#navi>li',
-				speed : 1000,
-				base : -300,
-				active : 'on'
-			})
-		});
-	</script>
+	<script src="js/main/header/jquery.mousewheel.min.js"></script>
 </head>
 <body>
 
     <ul id="navi">
-		<li class="on"><a href="#header">01</a><div></div></li>
+		<li class="on"></li>
+		<li><a href="#visual">01</a><div></div></li>
 		<li><a href="#content">02</a><div></div></li>
-		<li><a href="#rollingBox">03</a><div></div></li>
-		<li><a href="#bottom">04</a><div></div></li>
-    </ul>
+		<li><a href="#banner">03</a><div></div></li>
+		<li><a href="#rollingBox">04</a><div></div></li>
+		<li><a href="#bottom">05</a><div></div></li>
+		<li></li>
+	</ul>
     
     <include src="header/header.html"></include>
     <include src="visual/visual.html"></include>
