@@ -1,0 +1,134 @@
+#bottom {
+    position: relative; padding: 50px 0px 0px; box-sizing: border-box;
+
+    >div {text-align: center; transition: 0.5s;}
+
+    p{font-family: 'Libre Baskerville', serif; font-size: 14px; margin-top: 30px;} 
+
+    a{display:block; width:150px; height:40px; text-align:center; font:13px/40px 'arial'; color:#111; font-family: 'Libre Baskerville', serif;border: 1px solid black;  position: absolute; top: 57%; left: 50%; transform: translateX(-50%); transition: 0.5s;
+    
+        &:hover {background: #333; color: lightcoral;
+            i {color: lightcoral;}
+        }
+
+        i {position: absolute; top: 32%; right: 13%; font-size: 15px; color: #333; transition: 0.5s;}
+    } 
+
+    .inner {
+        width: 100%; height: 100%; margin: 0px auto; 
+        
+        &::after {content: ''; display: block; clear: both;} 
+
+        .left {
+            width: 50%; height: 400px; background: lightcoral; float: left; position: relative;
+
+            h1{text-align: center; margin-top: 100px; font-family: 'Libre Baskerville', serif;} 
+        }
+
+        .right {
+            width: 50%; height: 400px; float: right;position: relative; background-image: url(../img/main/bottom/img/gray1.jfif); color: lightpink;
+            
+            h1{text-align: center; margin-top: 100px; font-family: 'Libre Baskerville', serif;} 
+
+            a {color: lightpink; border: 1px solid lightpink;
+                
+                &:hover {background: #333; color: lightcoral;}
+
+                i {color: lightpink;}
+            }
+        }
+
+        .ico{
+            color: #777; position: absolute; top: 40%; left: 50%; transform: translateX(-50%);  width: 116px; height: 66.97px; background-color: black; margin: 33.49px 0; transition: 0.5s;
+            margin-left: auto;margin-right: auto; margin-bottom: 50px;
+
+            &::before {top: -42.0122px; content: ""; position: absolute;transition: 0.5s;
+                z-index: 1; width: 83.02px; height: 83.02px; transform: scaleY(0.5774) rotate(-45deg); background: black; left: 16.9878px;}
+
+            &::after {bottom: -40.0122px; content: ""; position: absolute; z-index: 1; width: 83.02px; height: 81.02px;transform: scaleY(0.5774) rotate(-45deg); transition: 0.5s;
+                background-color: black; left: 16.9878px;}
+
+            >h1 {position: absolute; top: 22%; left: 50%; transform: translateX(-50%); transition: 0.5s;  font-family: 'Libre Baskerville', serif; z-index: 5; color: lightcoral; font-size: 30px; letter-spacing: 1px;}
+        }
+    }
+}
+
+//tablet
+@media screen and (max-width:$tablet){
+    #bottom {padding: 0px 0px 0px; box-sizing: border-box;
+        .inner{
+            div {
+                p {padding: 0px 10px;} 
+            }
+    
+            .left{
+                h1 {font-size: 22px;} 
+            }
+            .right{
+                h1 {font-size: 22px;} 
+            }
+    
+            .ico{
+                top: 40%; width: 101px; height: 54.9px;
+    
+                >h1 {top: 16%;}
+    
+                &::before {top: -36.0122px; width: 71.02px; height: 71.02px; transform: scaleY(0.6) rotate(-45deg); left: 13.9878px;}
+    
+                &::after {bottom: -36.0122px;width: 71.02px; height: 71.02px;transform: scaleY(0.6) rotate(-45deg); left: 13.9878px;}
+            }
+        }
+        
+    }
+}
+
+//cellphone
+@media screen and (max-width:$cellphone){
+    #bottom {
+        .inner{
+            div {
+                p {padding: 0px 12px; box-sizing: border-box;} 
+            }
+    
+            .left{
+                h1 {font-size: 18px;} 
+            }
+            .right{
+                h1 {font-size: 18px;} 
+            }
+    
+            .ico{
+                width: 59px; height: 39.9px;
+    
+                >h1 {font-size: 20px;}
+    
+                &::before {top: -20.0122px; width: 40.02px; height: 40.02px; transform: scaleY(0.6) rotate(-45deg); left: 9.9878px;}
+    
+                &::after {bottom: -20.0122px;width: 40.02px; height: 40.02px;transform: scaleY(0.6) rotate(-45deg); left: 9.9878px;}
+            }
+        }
+    }
+}
+
+@media screen and (max-width:425px){
+    #bottom {
+        .inner{
+            .left{
+                h1 {font-size: 15px;} 
+            }
+            .right{
+                h1 {font-size: 15px;} 
+            }
+
+        }
+        p{font-size: 13px;}
+        a{width:108px;
+    
+            &:hover {background: #333; color: lightcoral;
+                i {color: lightcoral;}
+            }
+    
+            i {top: 30%; right: 4%;}
+        } 
+    }
+}

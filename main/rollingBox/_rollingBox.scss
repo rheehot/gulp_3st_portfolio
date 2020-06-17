@@ -1,0 +1,74 @@
+#rollingBox {
+    width: 100%; height: 100%; padding: 180px 100px 50px; box-sizing: border-box; transition: 0.5s; position: relative;
+
+    >.inner {
+        width:100%; height: 100; margin:0px auto; position: relative;
+
+        h1 {font-size: 150px; color: lightcoral; z-index: 3; font-family: 'Dancing Script', cursive; letter-spacing: 10px; transition: 0.5s; font-weight: 100;
+        
+            &:nth-of-type(1) {position: absolute; top: -60%; left: 0px;}
+
+            &:nth-of-type(2) {position: absolute; bottom: -49%; right: 0px;}
+        }
+
+        .listBox {
+            width:100%; height:200px; margin:100px auto; position:relative; background:lightblue; overflow: hidden;
+
+            .list {
+                position:absolute; width:1000px; height: 100%; bottom:0px; left:0px; box-sizing:border-box;
+                
+                li { width:200px; height:100%; box-sizing:border-box;  font:bold 80px/100px "arial"; color:#444; text-align:center; float:left;
+
+                    img {background-size: cover;}
+                
+                }
+            }
+        }
+
+        a {font-size: 30px; color: lightcoral; font-size: 50px;}
+        .rbtnPrev { position:absolute; left:-3%; top:32%;}
+        .rbtnNext { position:absolute; right:-3%; top:32%; }
+    
+    }
+}
+
+
+//tablet
+@media screen and (max-width:$tablet){
+    #rollingBox {
+        padding: 70px 50px;
+        
+        h1 {font-size: 130px;}
+        .rbtnPrev { position:absolute; left:-4%; top:32%;}
+        .rbtnNext { position:absolute; right:-4%; top:32%; }
+    }
+}
+
+//cellphone
+@media screen and (max-width:$cellphone){
+    #rollingBox {
+        
+        h1 {font-size: 110px;
+            &:nth-of-type(1) {position: absolute; top: -46%; left: 0px;}
+            &:nth-of-type(2) {position: absolute; bottom: -42%; right: 0px;}
+        }
+        .rbtnPrev {left:-9%;}
+        .rbtnNext {right:-10%;}
+    }
+}
+
+//cellphone
+@media screen and (max-width:425px){
+    #rollingBox {
+        
+        >.inner {
+            h1 {font-size: 110px;
+                &:nth-of-type(1) {position: absolute; top: -52%;}
+            }
+
+            .rbtnPrev {left:-13%;}
+            .rbtnNext {right:-13%;}
+        }
+    }
+}
+
