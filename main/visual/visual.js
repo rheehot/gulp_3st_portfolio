@@ -39,13 +39,6 @@ $(document).ready(function(){
         speed: 700,
         delay: 1000
     }); 
-    sliding({
-        type: 'box',
-        selector: '.box1',
-        speed: 600,
-        delay: 0
-    });
-
     
 /*------------------------이벤트 바인딩---------------------- */
     $btnNext.on('click' ,function(){
